@@ -152,3 +152,4 @@ C:\Users\ibrah_000\Desktop\WEB\Forms\obj\Debug\netcoreapp3.1\Forms.csproj.CoreCo
 C:\Users\ibrah_000\Desktop\WEB\Forms\obj\Debug\netcoreapp3.1\Forms.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ibrah_000\Desktop\WEB\Forms\obj\Debug\netcoreapp3.1\Razor\Views\Login\UserLogin.cshtml.g.cs
 C:\Users\ibrah_000\Desktop\WEB\Forms\obj\Debug\netcoreapp3.1\Razor\Views\Send\Index.cshtml.g.cs
+C:\Users\ibrah_000\Desktop\WEB\Forms\obj\Debug\netcoreapp3.1\Razor\Views\Home\Expense.cshtml.g.cs

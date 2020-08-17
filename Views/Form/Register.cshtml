@@ -4,31 +4,36 @@
     ViewData["Title"] = "Register";
 }
 
+@{ 
+    var result = ViewBag.message;
+    
+
+}
 
 
 <h1>Register</h1>
 <div class="container">
 
-
-
+    
+    <p>Please fill in this form to create an account!</p>
+    <hr>
     <form method="post">
         <label asp-for="UserId">User Name</label>
-        <input asp-for="UserId"  value="" class="form-control" />
+        <input asp-for="UserId" value="" class="form-control" required />
         <label asp-for="UserEmail">User E-mail</label>
-        <input asp-for="UserEmail"  value="" class="form-control" />
+        <input asp-for="UserEmail" value="" class="form-control" type="email" />
         <label name="UserPassword">User Password</label>
-        <input name="UserPassword"type="password"  value="" class="form-control" />
-        
-
-
-
+        <input name="UserPassword" type="password" value="" class="form-control" required />
+        <label name="checkPassword">Password Again</label>
+        <input name="checkPassword" type="password" value="" class="form-control" required />
         <div class="form-group mt-2">
-
             <input type="submit" name="name" value="Register" class="border-danger" />
+            <button class="btn btn-danger" value="Register"></button>
         </div>
-        
-        <h5 >Already have an account?  <a asp-controller="login" asp-action="userlogin">Click Here !</a>  </h5>
-
+        <h5>Already have an account?  <a asp-controller="login" asp-action="userlogin">Click Here !</a>  </h5>
     </form>
+
+
+    <h5 class="text-primary">@result</h5>
 
 </div>

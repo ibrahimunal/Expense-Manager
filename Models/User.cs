@@ -12,7 +12,7 @@ namespace Forms.Models
        
         public string UserId { get; set; }
         public string UserEmail { get; set; }
-
+        [Key]
         public string UserPassword { get; set; }
         public string checkPassword { get; set; }
 

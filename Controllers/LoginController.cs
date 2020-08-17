@@ -10,7 +10,7 @@ namespace Forms.Controllers
     public class LoginController : Controller
     {
       
-
+        //[HttpPost]
         public ViewResult UserLogin(User user)
         {
 
