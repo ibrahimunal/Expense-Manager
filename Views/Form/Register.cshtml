@@ -1,0 +1,34 @@
+﻿@model Forms.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+
+<h1>Register</h1>
+<div class="container">
+
+
+
+    <form method="post">
+        <label asp-for="UserId">User Name</label>
+        <input asp-for="UserId"  value="" class="form-control" />
+        <label asp-for="UserEmail">User E-mail</label>
+        <input asp-for="UserEmail"  value="" class="form-control" />
+        <label name="UserPassword">User Password</label>
+        <input name="UserPassword"type="password"  value="" class="form-control" />
+        
+
+
+
+        <div class="form-group mt-2">
+
+            <input type="submit" name="name" value="Register" class="border-danger" />
+        </div>
+        
+        <h5 >Already have an account?  <a asp-controller="login" asp-action="userlogin">Click Here !</a>  </h5>
+
+    </form>
+
+</div>

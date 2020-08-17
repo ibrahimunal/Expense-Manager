@@ -1,0 +1,30 @@
+﻿@using Forms.Models
+
+@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+    
+
+@foreach (var item in Model)
+{
+    
+
+    <table>
+        <tr>
+            <td>@item.UserEmail</td>
+            <td>@item.UserPassword</td>
+        </tr>
+    </table>
+}
+
+<h1>mehmet</h1>
+
