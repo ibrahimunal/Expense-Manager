@@ -33,20 +33,31 @@
     </div>
 </div>*@
 
-    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                <label asp-for="UserId">User Name</label>
+                <input asp-for="UserId" value="" class="form-control" />
 
-        <form method="post">
-            <label asp-for="UserId">User Name</label>
-            <input asp-for="UserId" value="" class="form-control" />
-           
-            <label name="UserPassword">User Password</label>
-            <input name="UserPassword" type="password" value="" class="form-control" />
-          
-            <div class="form-group mt-2">
-                <input type="submit" name="name" value="Log in" class="border-danger" />
+                <label name="UserPassword">User Password</label>
+                <input name="UserPassword" type="password" value="" class="form-control" />
+
+                
+                <button type="submit" class="btn btn-success mt-2">Log in</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+
+            <div class="card" style="width:auto">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go To Home Page</a>
+                </div>
             </div>
-           
-        </form>
+
+        </div>
+   
 
 
         
