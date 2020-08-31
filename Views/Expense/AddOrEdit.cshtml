@@ -1,0 +1,62 @@
+﻿@model Forms.Models.Expense
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.id" onsubmit=" return jQueryAjaxPost(this);" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <input type="hidden" asp-for="date" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="type" class="control-label"></label>
+                        <input asp-for="type" class="form-control" />
+                        <span asp-validation-for="type" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="amount" class="control-label"></label>
+                        <input asp-for="amount" class="form-control" />
+                        <span asp-validation-for="amount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    @*                    <div class="form-group">
+            <label asp-for="date" class="control-label"></label>
+            <input asp-for="date" class="form-control" />
+            <span asp-validation-for="date" class="text-danger"></span>
+        </div>*@
+                    <div class="form-group">
+                        <label asp-for="catalouge" class="control-label"></label>
+                        <input asp-for="catalouge" class="form-control" />
+                        <span asp-validation-for="catalouge" class="text-danger"></span>
+                    </div>
+                    <div class="row d-flex justify-content-end mt-lg-5">
+                        <div class="mr-2">
+                            <a asp-action="Index" class="btn btn-warning">Back to List</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          
+      
+
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

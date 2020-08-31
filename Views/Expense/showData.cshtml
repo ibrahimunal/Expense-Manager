@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Forms.Models.Expense>
+@{
+    ViewData["Title"] = "showData";
+}
+
+<h1>showData</h1>
+
+
+
+@foreach (var item in ViewBag.myExpenseList)
+{
+
+
+    <table>
+        <tr>
+            <td>@item.type</td>
+            <td>@item.amount</td>
+            <td>@item.catalouge</td>
+            <td>@item.catalouge</td>
+        </tr>
+    </table>
+}

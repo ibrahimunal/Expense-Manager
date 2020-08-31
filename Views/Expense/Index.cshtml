@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Forms.Models.Expense>
+
+@{
+    ViewData["Title"] = "Index";
+}
+   
+    
+<h1 class="text-center"><i class="fas fa-lira-sign fa-lg text-success mr-2"></i>Expense Manager </h1>
+<div id="view-all">
+    
+    @await Html.PartialAsync("_ViewAll",Model)
+</div>

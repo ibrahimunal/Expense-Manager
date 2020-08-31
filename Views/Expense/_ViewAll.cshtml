@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Forms.Models.Expense>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.catalouge)
+            </th>
+            <th class="mr-3 d-flex justify-content-end">
+                <a onclick="showPopup('@Url.Action("AddOrEdit","Expense",null,Context.Request.Scheme)','New Expense')" class="btn btn-success text-white"><i class="fas fa-plus-circle text-white "></i>Add</a>
+            </th>
+            <th class="mr-3">
+                <a asp-controller="ColumnChart" asp-action="Index" class="btn btn-warning text-white"><i class="fas fa-plus-circle text-white mr-2"></i>Graph</a>
+            </th>
+@*            <th class="mr-3">
+                <a onclick="showPopup('@Url.Action("Index","ColumnChart",null,Context.Request.Scheme)','New Graph')" class="btn btn-success text-white"><i class="fas fa-plus-circle text-white "></i>Graph</a>
+            </th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.catalouge)
+                </td>
+                <td class=" d-flex  justify-content-end">
+                   <a onclick="showPopup('@Url.Action("AddOrEdit","Expense",new { id= item.id },Context.Request.Scheme)','Update Expense')" class="btn btn-success text-white"><i class="fas fa-edit mr-2 "></i>Edit</a>
+                    @*<a asp-action="AddOrEdit" asp-route-id="@item.id">Edit</a> |*@
+                  
+                    @*<a asp-action="Delete" asp-route-id="@item.id"  class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</a>*@
+
+                <form class="ml-2"asp-action="Delete" asp-route-id="@item.id" onsubmit="return jQueryAjaxDelete(this)">
+
+                    <input type="submit"  value="Delete" class="btn btn-danger"/>
+                </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 
